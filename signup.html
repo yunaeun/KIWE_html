@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>kiwe</title>
+        <style>
+          h5{
+            margin:0;
+          }
+        </style>
+    </head>
+    <body>
+      <center>
+          <br>
+          <br>
+          <br>
+          <br>
+          <h1>회원가입</h1>
+        <section>
+            <form name="signup" action="{% url 'signup' %}" method="post">
+            {% csrf_token %}
+            아이디<br>
+            <input type="text" name="id">
+            <br>
+            비밀번호<br> 
+            <input type="password" name="password"><br>
+            비밀번호 확인<br> 
+            <input type="password" name="passwordcheck">
+            <br><br>
+            생년월일<br> 
+            <input type="date" name="birth">
+            <br><br>
+            성별<br>  
+            <label for="man">남자</label>
+            <input type="radio" name="gender" value="m" id="man">
+            <label for="woman">여자</label>
+            <input type="radio" name="gender" value="w" id="woman"> <br><br>
+            전화번호<br>  
+            <input type="tel" name="phonenumber" placeholder="01012345678">
+            <input type="button" name="accept" value="인증번호 받기"><br>
+            <input type="text" name="itsme" placeholder="인증번호를 입력하세요">
+            <input type="button" name="ok" value="ok"><br><br>
+            사용자 정보 제공 동의
+            <input type="checkbox" name="agree" value="y" checked><br><br>
+            <input type="submit" name="submit" value="return"> 
+        </form>
+    </section>
+  <center>
+</body>
+</html>
+    
